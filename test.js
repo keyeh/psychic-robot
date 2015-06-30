@@ -76,7 +76,7 @@ var currentState;
 function requestFunctions (argument) {
 	currentState=0;
 	console.log("[REQUESTS] New page load, resetting state to: "+currentState);
-	$("#request-state0-submit").click(function () {
+	$("#request-state0-next").click(function () {
 		//Input checking here
 		//Form processing here
 		stateChange(1);
@@ -87,6 +87,13 @@ function requestFunctions (argument) {
 				stateChange(currentState-1);
 			};
 		});
+
+	$("#request-submit").click(function () {
+		//Input checking here
+		//Form processing here
+		//DB Connection here
+		alert("Not implemented yet");
+	});
 
 	function stateChange(i) {
 		console.log("[REQUESTS] Changing to:" +i+ " from currentState:"+currentState);
