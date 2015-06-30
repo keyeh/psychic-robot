@@ -1,0 +1,28 @@
+body {
+  padding-top: 50px;
+  height: 100%
+}
+.starter-template {
+  padding: 40px 15px;
+}
+
+h1 {
+	text-align: center;
+}
+
+body #map-cover {
+	position: absolute;
+	background: white;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	display: table;
+}
+
+
+
+body #map-canvas {
+        height: 35em;
+        margin: 0px;
+        padding: 0px;
+      }
