@@ -70,7 +70,6 @@ function is_touch_device() { // check if the plugin's running on a touch device
 
 
 
-
 //Request page state functions
 var currentState;
 
@@ -99,12 +98,6 @@ function requestFunctions (argument) {
 		}).fadeIn();
 	};
 }
-
-
-
-
-
-
 
 
 //DB functions for map
