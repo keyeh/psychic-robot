@@ -10,10 +10,21 @@ h1 {
 	text-align: center;
 }
 
-
-
 body #view-map-canvas {
         height: 35em;
         margin: 0px;
         padding: 0px;
       }
+
+
+
+
+
+
+
+.vertical-align-home {
+  position: absolute !important;
+  top: 50% !important;
+  left:50% !important;
+  transform: translate(-50%,-50%) !important;
+}

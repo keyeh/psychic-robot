@@ -23,9 +23,13 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- script src="/demo/js/jquery-ui-1.10.2.custom.min.js"></script -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing"></script>
-    <script src="map.js"></script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing"></script>
+    <script src="/map.js"></script>
+
+
+    <script src="/js/jquery.kool-swap.min.js"></script>
+    <script src="/test.js"></script>
 </head>
 
 <body>
@@ -51,16 +55,24 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div id="main" class="starter-template">
+    <div class="container kool-swap">
+        <div id="main" class="vertical-align-home">
             <h1>Homepage</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.
-                <br> All you get is this text and a mostly barebones HTML document.</p>
+            <p class="lead text-center">Use this document as a way to quickly start any new project.
+                <br>All you get is this text and a mostly barebones HTML.</p>
+                <div class="row">
+                <div class="col-xs-2"></div>
+                  <div class="col-md-4">
+                    <a href="view.html" class="btn btn-lg btn-default btn-block">View</a><br/>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="requests.html" class="btn btn-lg btn-primary btn-block">Request</a>
+                  </div>
+                <div class="col-xs-2"></div>
+                </div>
+                </p>
         </div>
     </div>
-
-    <script src="/js/jquery.kool-swap.min.js"></script>
-    <script src="/test.js"></script>
 
 </body>
 
