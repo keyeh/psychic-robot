@@ -92,7 +92,8 @@ function requestFunctions (argument) {
 		//Input checking here
 		//Form processing here
 		//DB Connection here
-		alert("Not implemented yet");
+		shakeForm();
+		// alert("Not implemented yet");
 	});
 
 	function stateChange(i) {
@@ -104,6 +105,28 @@ function requestFunctions (argument) {
 			currentState=i;
 		}).fadeIn();
 	};
+
+
+
+
+	function shakeForm() {
+	   var l = 10;  
+	   for( var i = 0; i < 6; i++ )   
+	     $( ".request-form-shake" ).animate({
+	     	'margin-left': "+=" + ( l = -l ) + 'px',
+	     	'margin-right': "-=" + ( l = +l ) + 'px'
+	     }, 50);
+	 }
+
+
+
+
+
+
+
+
+
+
 }
 
 
