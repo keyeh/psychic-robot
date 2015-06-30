@@ -45,23 +45,7 @@ function readyFunctions() {
 	// Collapse mobile nav bar if open
 	$(".navbar-collapse").collapse('hide');
 
-	//Not sure what this does...
-	$('#tabContent').koolSwap({
-		swapTriggerBox : '.tabs',
-		bouncingBoxes : '.description, footer',
-		bouncingBoxHandling: 'slide',
-		direction: 'left-to-right',
-		moveSwapBoxClasses : true,
-		positionType: 'absolute',
-		outEasing : 'easeInOutCirc',
-		inEasing : 'easeOutBack',
-		outerWidth: true
-	});
-
-
-
-
-
+	
 
 }
 
