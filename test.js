@@ -32,6 +32,11 @@ function readyFunctions() {
 		initializeViewMap();
 	}
 
+	// Initialize google map if current page has one.
+	if (document.getElementById("request-map-canvas")) {
+		initializeRequestMap();
+	}
+
 	// Init request page if current page has requests
 	if (document.getElementById("request-states-container")) {
 		requestFunctions();
@@ -79,7 +84,17 @@ function requestFunctions (argument) {
 	$("#request-state0-next").click(function () {
 		//Input checking here
 		//Form processing here
-		stateChange(1);
+
+
+
+
+		//Map fix centering and resizing
+		var currCenter = map.getCenter();
+		console.log(map.getCenter());
+		stateChange(1, function() {
+			google.maps.event.trigger(map, 'resize');
+			map.setCenter(currCenter);
+		});
 	});
 
 	$("#request-state-back").click(function () {
@@ -96,14 +111,18 @@ function requestFunctions (argument) {
 		// alert("Not implemented yet");
 	});
 
-	function stateChange(i) {
+	function stateChange(i, callback) {
 		console.log("[REQUESTS] Changing to:" +i+ " from currentState:"+currentState);
 
 		$("#request-states-container").fadeOut(function() {
 			$(".request-state"+currentState).addClass("hide");
 			$(".request-state"+i).removeClass("hide");
 			currentState=i;
-		}).fadeIn();
+		}).fadeIn(function() {
+    		if(callback && typeof callback == "function") {
+			    callback();
+			}
+  		});
 	};
 
 
@@ -117,14 +136,6 @@ function requestFunctions (argument) {
 	     	'margin-right': "-=" + ( l = +l ) + 'px'
 	     }, 50);
 	 }
-
-
-
-
-
-
-
-
 
 
 }

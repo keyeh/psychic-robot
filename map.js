@@ -4,12 +4,27 @@ var map;
 
 
 
+function initializeRequestMap() {
+	var kmlLayers=[];
+	mapSetup("request-map-canvas");
+	
+}
+
+
+
+
+
+
+
+
 function initializeViewMap() {
 	var kmlLayers=[];
-	mapSetup();
+	mapSetup("view-map-canvas");
 	
 	//Add KML Layers
 	addKmlLayers(
+
+
 		0,
 		kmlLayers,
 		new google.maps.KmlLayer({
@@ -44,9 +59,25 @@ function initializeViewMap() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Contains functions for interacting with every map on the site.
 //Also returns styles and settings used for every map.
-function mapSetup () {
+function mapSetup (canvasID) {
 	//Reset button
 	$("#btn-reset-map").click(function () {
 		for (var i=0; i < poly.length; i++) {
@@ -63,10 +94,10 @@ function mapSetup () {
 
 	//Returns styles and settings used for every map.
 	map = new google.maps.Map(
-		document.getElementById('view-map-canvas'),
+		document.getElementById(canvasID),
 			{
 				zoom: 10,
-				center: new google.maps.LatLng(34.0204989, -118.4117325),
+				center: new google.maps.LatLng(34.0330186, -118.293),
 
 				panControl: false,
 				zoomControl: true,
@@ -105,11 +136,6 @@ function toggleKML(i, e) {
 		e[i].setMap(null);
 	}
 }
-
-
-
-
-
 
 
 
